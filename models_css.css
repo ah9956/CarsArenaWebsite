@@ -1,0 +1,112 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.model-card {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+    color: #fff;
+}
+.model-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.model-card .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    color: #fff;
+    padding: 15px;
+}
+.model-card .model-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+.model-card .car-name {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    color: #fff;
+    z-index: 2;
+    text-align: left;
+}
+
+.model-card .fuel-type {
+    font-size: 0.9rem;
+    margin: 0;
+}
+.model-card .price {
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+.model-card .btn {
+    width: 100%;
+    margin-top: 5px;
+}
+.video {
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    max-height: 100vh;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.explore-btn {
+    position: absolute;
+    top: 75%;
+    left: 75%;
+    z-index: 10;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.explore-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.cover-large {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.cover-small {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-sizing: border-box;
+    display: none;
+}
+@media (max-width: 768px) {
+    .explore-btn {
+        position: absolute;
+        top: 80%;
+        left: 30%;
+        z-index: 10;
+        background-color: transparent;
+        color: #fff;
+        border: 2px solid #fff;
+        padding: 8px 16px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .cover-large {
+        display: none;
+    }
+
+    .cover-small {
+        display: block;
+    }
+}

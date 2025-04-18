@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+
+    <style>
+     * {
+         margin: 0;
+           padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: Arial, sans-serif;
+        }
+        .video-section {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }      
+   .background-videoh {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+
+
+        .car-logos img {
+            height: 50px;
+            width: auto;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            cursor: pointer;
+        }
+
+        .car-logos img:hover {
+            transform: scale(1.2);
+            filter: brightness(1.2);
+        }
+        .nav-size {
+            font-size: 1.3rem;
+        }
+
+        .navbar {
+            height: 60px;
+            width: 100%;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
+
+        #logoh {
+            height: 50px;
+            width: auto;
+        }
+
+        .brand-symbolsh {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .brand-symbolsh h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .symbol-containerh {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .brand-logoh {
+            width: 200px; 
+            height: auto;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .brand-logoh:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="res/logo1.png" alt="Cars Arena Logo" id="logoh">
+                <span class="showroomname" style="color:red;"><strong>Cars Arena</strong></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto nav-size">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="locations.html">Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <a href="login.html" class="btn btn-danger ms-auto">Login/Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="video-section">
+        <video class="background-videoh" autoplay loop muted>
+            <source src="res/carh.mp4" type="video/mp4">
+        </video>
+
+            </section>
+
+    <section class="brand-symbolsh">
+        <h2>Our Iconic Brands</h2>
+        <div class="symbol-containerh">
+            <a href="porsche.html" class="btn btn-link">
+                <img src="res/porsche.png" alt="BMW Symbol" class="brand-logoh">
+            </a>
+            <a href="bmw.html" class="btn btn-link">
+                <img src="res/bmw.png" alt="BMW Symbol" class="brand-logoh">
+            </a>
+            <a href="Ferrari.html" class="btn btn-link">
+                <img src="res/ferarri.png" alt="BMW Symbol" class="brand-logoh">
+            </a>
+            <a href="Aston martin.html" class="btn btn-link">
+                <img src="res/aston.png" alt="BMW Symbol" class="brand-logoh">
+            </a>
+            
+        </div>
+    </section>
+    <footer>
+        <div class="company-name">
+            <p>&copy; Cars Arena</p>
+        </div>
+        <div class="contact-info">
+            <p>Email: info@carsarena.com</p>
+            <p>Phone: +1 234 567 890</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

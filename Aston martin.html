@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTON MARTIN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="models_css.css" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+<style>
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.model-card {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+    color: #fff;
+}
+.model-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.model-card .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    color: #fff;
+    padding: 15px;
+}
+.model-card .model-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.model-card .fuel-type {
+    font-size: 0.85rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2px 8px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.model-card .price {
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+.model-card .btn {
+    width: 100%;
+    margin-top: 5px;
+}
+.video {
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    max-height: 100vh;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.explore-btn {
+    position: absolute;
+    top: 75%;
+    left: 75%;
+    z-index: 10;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.explore-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.cover-large {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.cover-small {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-sizing: border-box;
+    display: none;
+}
+@media (max-width: 768px) {
+    .explore-btn {
+        position: absolute;
+        top: 80%;
+        left: 30%;
+        z-index: 10;
+        background-color: transparent;
+        color: #fff;
+        border: 2px solid #fff;
+        padding: 8px 16px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .cover-large {
+        display: none;
+    }
+
+    .cover-small {
+        display: block;
+    }
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="res/logo1.png" alt="Cars Arena Logo" class="logo me-2">
+                <span class="showroomname"><strong>Cars Arena</strong></span>
+            </a>
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto nav-size">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="locations.html">Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <a href="login.html" class="btn btn-danger ms-auto">Login/Sign Up</a>
+            </div>
+        </div>
+    </nav>
+    <div style="position: relative; height: 100vh;">
+        <video class="video cover-large" autoplay loop muted>
+            <source src="res/astonv1.mp4" type="video/mp4">
+        </video>
+        <img  class="cover-small" src="res/aston-small.jpg" alt="phone cover photo">
+        <button class="explore-btn" onclick="scrollToModels()">Explore Models</button>
+    </div>
+
+    <div id="models-section" class="container my-5">  
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4 my-5 justify-content-center">
+            <div class="col text-center">
+                <p class="fs-1"><b>Models</b></p>
+            </div>
+        </div>   
+    </div>       
+    <div class="container my-5">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4 my-5 justify-content-center">
+            <div class="col">
+                <div class="model-card">
+                    <img src="res/aston1.jpg" alt="Car Model 1">
+                    <div class="car-name">
+                        <div class="model-name">DB12</div>
+                        <div class="fuel-type">Petrol</div>
+                    </div>
+                    <div class="overlay">
+                        <p>The iconic, rear-engine sports car with exceptional performance.</p>
+                        <div class="price">from £99,800.00 incl. VAT</div>
+                        <button class="btn btn-light">Buy Now</button>
+                        <button class="btn btn-outline-light">Book a test ride</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="model-card">
+                    <img src="res/aston2.jpg" alt="Car Model 2">
+                    <div class="car-name">
+                        <div class="model-name">Valhalla</div>
+                        <div class="fuel-type">Petrol</div>
+                    </div>
+                    <div class="overlay">
+                        <p>The iconic, rear-engine sports car with exceptional performance.</p>
+                        <div class="price">from £109,800.00 incl. VAT</div>
+                        <button class="btn btn-light">Buy Now</button>
+                        <button class="btn btn-outline-light">Book a test ride</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4 my-5 justify-content-center">
+            <div class="col">
+                <div class="model-card">
+                    <img src="res/aston3.jpg" alt="Car Model 2">
+                    <div class="car-name">
+                        <div class="model-name">Vanquish</div>
+                        <div class="fuel-type">Petrol</div>
+                    </div>
+                    <div class="overlay">
+                        <p>The iconic, rear-engine sports car with exceptional performance.</p>
+                        <div class="price">from £119,800.00 incl. VAT</div>
+                        <button class="btn btn-light">Buy Now</button>
+                        <button class="btn btn-outline-light">Book a test ride</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="model-card">
+                    <img src="res/aston4.jpg" alt="Car Model 2">
+                    <div class="car-name">
+                        <div class="model-name">DB16</div>
+                        <div class="fuel-type">Petrol</div>
+                    </div>
+                    <div class="overlay">
+                        <p>The iconic, rear-engine sports car with exceptional performance.</p>
+                        <div class="price">from £99,800.00 incl. VAT</div>
+                        <button class="btn btn-light">Buy Now</button>
+                        <button class="btn btn-outline-light">Book a test ride</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="company-name">
+            <p>&copy; Cars Arena</p>
+        </div>
+        <div class="contact-info">
+            <p>Email: info@carsarena.com</p>
+            <p>Phone: +1 234 567 890</p>
+        </div>
+    </footer>
+    <script>
+        function scrollToModels() {
+            const modelsSection = document.getElementById('models-section');
+            modelsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
